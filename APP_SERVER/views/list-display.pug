@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1= title
+    p #{title} Available :
+
+    table
+        tr
+            th Brand
+            th Model
+            th Color
+            th Cost
+        each phone in data
+            tr
+                td= phone.brand
+                td= phone.model
+                td= phone.color
+                td= phone.cost
+

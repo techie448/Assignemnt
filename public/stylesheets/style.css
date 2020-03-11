@@ -1,8 +1,33 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #2d2d30;
+    color: #bdbdbd;
 }
 
-a {
-    color: #00B7FF;
+.container.window * {
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #5C5C5F
+}
+
+tr:nth-child(odd) {
+    background-color: #47474a
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
 }

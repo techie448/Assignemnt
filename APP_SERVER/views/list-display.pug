@@ -10,10 +10,12 @@ block content
             th Model
             th Color
             th Cost
+            th Warranty
         each phone in data
             tr
                 td= phone.brand
                 td= phone.model
                 td= phone.color
                 td= phone.cost
+                td= phone.warranty + ' Years'
 

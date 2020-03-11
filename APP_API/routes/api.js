@@ -1,1 +1,12 @@
-// TODO : Create a file in your APP_API\routes folder which designs the routes for your api and maps them to the correct controller
+let express = require('express');
+const router = express.Router();
+
+const ctrlPhone = require('../controllers/main');
+
+router.get('/phones', ctrlPhone.getPhones);
+router.post('/phones', ctrlPhone.createPhone);
+router.put('/phones/:phoneid', ctrlPhone.deletePhone);
+router.get('/phones/:phoneid', ctrlPhone.getSinglePhone);
+router.put('/phones/:phoneid', ctrlPhone.updatePhone);
+
+module.exports = router;

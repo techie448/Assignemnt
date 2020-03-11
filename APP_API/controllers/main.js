@@ -1,1 +1,13 @@
-// TODO :contains placeholder functions (NOTE: they do not need to do anything with the database) for all the major CRUD operations (getting a list, getting a single, deleting, updating and creating
+const getPhones = (req, res) => res.status(200).json({"status": "success"});
+const createPhone = (req, res) => res.status(200).json({"status": "success"});
+const getSinglePhone = (req, res) => res.status(200).json({"status": "success"});
+const updatePhone = (req, res) => res.status(200).json({"status": "success"});
+const deletePhone = (req, res) => res.status(200).json({"status": "success"});
+
+module.exports = {
+    getPhones,
+    createPhone,
+    getSinglePhone,
+    updatePhone,
+    deletePhone
+};

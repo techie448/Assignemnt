@@ -1,0 +1,22 @@
+<app-header [header]="data.header"></app-header>
+<div class="col-md-2">
+  <p>Brand</p>
+  <p>Model</p>
+  <p>Cost</p>
+  <p>Warranty</p>
+  <p>Box</p>
+  <p>Charger</p>
+  <p>Earphone</p>
+</div>
+<div class="col-md-4"><p> {{phone?.brand}} </p><p>
+   <p> {{phone?.model}} </p>
+   <p>  {{phone?.color}} </p>
+ <p> {{phone?.cost}} </p>
+   <p>  {{phone?.warranty}} </p>
+ <p>  {{phone?.accessory?.box}} </p>
+   <p>  {{phone?.accessory?.charger}} </p>
+ <p>  {{phone?.accessory?.earphone}} </p>
+  <button [routerLink]="['/update',phone?._id]" class="btn btn-primary">Update</button>
+  <button (click)="deletePhone(phone?._id)" class="btn btn-danger">Delete</button>
+</div>
+<div class="col-md-6"><img src="https://source.unsplash.com/random/?mobile"></div>

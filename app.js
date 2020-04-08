@@ -6,14 +6,19 @@ var logger = require('morgan');
 
 let db = require('./APP_SERVER/models/db');
 
-var indexRouter = require('./APP_SERVER/routes/index');
+// var indexRouter = require('./APP_SERVER/routes/index');
 var usersRouter = require('./APP_SERVER/routes/users');
 var apiRouter = require('./APP_API/routes/api');
 
 var app = express();
-
+app.all('/*', function(req,res,next){
+  res.header("Access-Control-Allow-Origin","*");
+  res.header("Access-Control-Allow-Headers","*");
+  res.header("Access-Control-Allow-Methods", "*");
+  next();
+});
 // view engine setup
-app.set('views', path.join(__dirname, 'APP_SERVER', 'views'));
+// app.set('views', path.join(__dirname, 'APP_SERVER', 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
@@ -21,10 +26,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
+app.use(express.static(path.join(__dirname, 'APP_PUBLIC/phone-public/dist/phone-public')));
+// app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/users', usersRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -1,34 +1,44 @@
+* {
+  transition: 3s;
+}
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background: #2d2d30;
-    color: #bdbdbd;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #2d2d30;
+  color: #bdbdbd;
 }
 
-.container.window * {
-    padding: 20px;
+form#f * {
+  padding: 10px;
+  margin: 10px 10px;
+  display: block;
 }
 
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
+label > *,
+form#f button {
+  color: black;
 }
 
-th, td {
-    text-align: left;
-    padding: 8px;
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #5C5C5F
+  background-color: #5c5c5f;
 }
 
 tr:nth-child(odd) {
-    background-color: #47474a
+  background-color: #47474a;
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
+}
+
+table.acc th {
+  background-color: brown;
 }

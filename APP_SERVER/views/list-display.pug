@@ -11,6 +11,7 @@ block content
             th Color
             th Cost
             th Warranty
+            th.blank
         each phone in data
             tr
                 td= phone.brand
@@ -18,4 +19,7 @@ block content
                 td= phone.color
                 td= phone.cost
                 td= phone.warranty + ' Years'
+                td.blank
+                    a(href='/detail/' + phone._id)
+                        button.btn.btn-primary Details
 

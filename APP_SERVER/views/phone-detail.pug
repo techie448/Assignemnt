@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1= title
+    table
+        tr
+            th Brand
+            th Model
+            th Color
+            th Cost
+            th Warranty
+            th Accessories
+        tr
+            td= phone.brand
+            td= phone.model
+            td= phone.color
+            td= phone.cost
+            td= phone.warranty + ' Years'
+            td
+              table.acc
+                tr
+                  th Box
+                  th Charger
+                  th Earphone
+                if phone.accessory
+                  tr
+                    td=phone.accessory.box
+                    td=phone.accessory.charger
+                    td=phone.accessory.earphone

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1= title
+    form#f(method='POST' action='')
+        label(for='brand') Brand:
+            input#brand(type='text' name='brand' required)
+        label(for='model') Model:
+            input#model(type='text' name='model' required)
+        label(for='cost') Cost:
+            input#cost(type='number' name='cost' required)
+        label(for='color') Color:
+            input#color(type='text' name='color' required)
+        label(for='warranty') Warranty in years:
+            input#warranty(type='number' name='warranty' required)
+        label(for='box') Box:
+            select#box(name="box")
+                option(value='true') Yes
+                option(value='false') No
+        label(for='charger') Charger:
+            select#charger(name="charger")
+                option(value='true') Yes
+                option(value='false') No
+        label(for='earphone') Earphone:
+            select#earphone(name="earphone")
+                option(value='true') Yes
+                option(value='false') No
+        button.btn.btn-success(type='submit') Submit
+

@@ -1,0 +1,27 @@
+<app-header [header]="data.header"></app-header>
+<form (ngSubmit)="createPhone(phone)">
+  <label for="brand">Brand:<input id="brand" name="brand" required type="text" class="form-control" [(ngModel)]="phone.brand"></label>
+  <label for="model">Model:<input id="model" name="model" required type="text" class="form-control" [(ngModel)]="phone.model"></label>
+  <label for="cost">Cost:<input id="cost" name="cost" required type="number" class="form-control" [(ngModel)]="phone.cost"></label>
+  <label for="color">Color:<input id="color" name="color" required type="text" class="form-control" [(ngModel)]="phone.color"></label>
+  <label for="warranty">Warranty in years:<input id="warranty" name="warranty" required type="number" class="form-control" [(ngModel)]="phone.warranty"></label>
+  <label for="box">Box:
+    <select id="box" name="box" class="form-control" [(ngModel)]="phone.accessory.box">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+  </label>
+  <label for="charger" >Charger:
+    <select id="charger" name="charger" class="form-control" [(ngModel)]="phone.accessory.charger">
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+  </label>
+  <label for="earphone" >Earphone:
+    <select id="earphone" name="earphone" class="form-control" [(ngModel)]="phone.accessory.earphone">
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+  </label>
+  <button class="btn btn-success" type="submit">Submit</button>
+</form>
